@@ -95,7 +95,7 @@ console.log(biggestNegativeNumber([[2, -9, -3, 0], [1, 2], [-4 , -11, 0]]))
 //6 Write a JavaScript function to get all possible subsets of length 3 of the given array. Assume that all elements in the array are unique.
 function subsets (arr){
     let result = [];
-    if (arr.length < 3) {
+    if (arr.length <= 3) {
       return arr
      } else {
       for(let i = 0; i < arr.length; i++) {
