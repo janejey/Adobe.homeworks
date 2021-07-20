@@ -1,16 +1,18 @@
 //1 Given an array of numbers. Print frequency of each unique number. (Frequency is the count of particular element divided by the count of all elements)
-function frequency (arr){
-	let result = {};
-	for (let i = 0; i < arr.length; i++){
-		if(result[arr[i]] == undefined) {
-			result[arr[i]] = 1;
-		} else {
-			result[arr[i]]++;
+function frequency(arr){
+	let obj = {};
+	for (let i = 0; i < arr.length; i++) {
+		if(!obj.hasOwnProperty(arr[i])){
+			obj[arr[i]] = 0;
 		}
-		result[arr[i]] /= arr.length
-	}return result;
+		obj[arr[i]] += 1
+	}
+	for(let value in obj){
+		obj[value] /= arr.length
+	}
+	return obj;
 }
-console.log(frequency([1, 2, 3]))
+console.log(frequency([1, 1, 2, 2, 3]))
 
 
 //2 Write a function that accepts a string(a sentence) as a parameter and finds the longest word within the string․ If there are several words which are the longest ones, print the last word(words can be separated by space, comma or hyphen).
