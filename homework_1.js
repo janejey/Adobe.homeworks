@@ -53,7 +53,7 @@ function moveChars(str) {
     let slicedStr = [];
     let word = "";
     for (let i = 0; i < str.length; i += 3) {
-        let tmp = str.moveChars(i, i + 3)
+        let tmp = str.slice(i, i + 3)
         slicedStr.push(tmp)
         tmp = "";
     }
