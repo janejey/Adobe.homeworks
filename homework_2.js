@@ -83,7 +83,7 @@ function objTree (arr) {
 }
 
 function objectById (tree, parent) {
-     if(tree.hasOwnProperty(`${parent}`)){
+     if(tree.hasOwnProperty(parent)){
          return tree[parent];
  }
 	for(let prop in tree){
