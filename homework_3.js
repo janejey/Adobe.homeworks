@@ -52,13 +52,10 @@ subDigits('abcdfghz', 7)
 
 //5. Given an array of integers. All numbers are unique. Find the count of missing numbers between minimum and maximum elements to make integers sequence.
 function allNumsBetweenMaxAndMin(arr) {
-  let allNums = [];
   arr.sort((a,b) => a - b)
   let min = arr[0];
   let max = arr[arr.length - 1]
-  for (let i = min; i <= max; i++) {
-    allNums.push(i)
-  } return allNums
+  return max - min
 }
 allNumsBetweenMaxAndMin([1, 3, 4, 2, 10])
 
