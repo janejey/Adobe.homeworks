@@ -55,7 +55,7 @@ function allNumsBetweenMaxAndMin(arr) {
   arr.sort((a,b) => a - b)
   let min = arr[0];
   let max = arr[arr.length - 1]
-  return max - min
+  return max - min - arr.length + 1
 }
 allNumsBetweenMaxAndMin([1, 3, 4, 2, 10])
 
